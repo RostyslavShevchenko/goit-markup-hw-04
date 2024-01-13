@@ -1,5 +1,6 @@
 :root {
     --paragraph-color: #F4F4FD;
+    --GREY: #2E2F42B2;
 }
 
 body {
@@ -126,8 +127,13 @@ border-bottom: 1px solid #E7E9FC;
 /* main */
 
 .main-hero {
-    background-color: #2E2F42;
+    background-color: #2E2F42B2;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0;
+    max-width: 100%;
 }
 
 .main-hero .container {
@@ -184,6 +190,17 @@ border-bottom: 1px solid #E7E9FC;
     overflow: hidden;
 }
 
+.icon-container {
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background: #F4F4FD;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 24px 100px;
+}
+
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -212,7 +229,7 @@ border-bottom: 1px solid #E7E9FC;
 }
 
 .advantages-list-item {
-    width: calc((100% - 3 * 24px)/4);
+    width: calc((100% - 3 * 24px)/4);   
 }
 
 .text {
@@ -251,6 +268,37 @@ border-bottom: 1px solid #E7E9FC;
     text-align: center;
 }
 
+.link-icons-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
+    margin-top: 8px;
+    padding: 0 16px;
+}
+
+.social-icon {
+    padding: 0;
+}
+
+.icon-link {
+    display: inline-block;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    padding: 12px;
+    background-color: #4D5AE5;
+}
+
+.icon-link:hover {
+    background-color: #31D0AA
+}
+
+.media {
+    fill: #F4F4FD;
+}
 /* portfolio section */
 
 .portfolio-roster {
@@ -266,10 +314,47 @@ border-bottom: 1px solid #E7E9FC;
     width: calc((100% - 48px) / 3);
 }
 
+.portfolio-roster-card:hover {
+    border: 1px solid #F4F4FD;
+    background: #FFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-roster-card:hover .cover-text-wrap{
+    transform: translateY(0%);
+}
+
 .portfolio-image {
     cursor: pointer;
     max-width: 100%;
     height: auto;
+}
+
+.cover-text-wrap {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: #F4F4FD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4D5AE5;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+}
+
+.cover-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+}
+
+.content-wrap {
+    position: relative;
+    overflow: hidden;
 }
 
 .portfolio-description {
@@ -284,6 +369,15 @@ border-bottom: 1px solid #E7E9FC;
     background-color: #2E2F42;
     padding: 100px 0;
 }
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
 .footer-logo {
     display: inline-block;
     font-family: "Raleway", sans-serif;
@@ -307,4 +401,24 @@ border-bottom: 1px solid #E7E9FC;
     letter-spacing: 0.32px;
     color: var(--paragraph-color);
     max-width: 264px;
+}
+
+.footer-media {
+flex-grow: 1;
+margin-left: 120px;
+}
+
+.media-header {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    color: #fff;
+}
+
+.footer-links {
+    padding: 0;
+    gap: 16px;
+    margin-top: 16px;
+    justify-content: start;
 }
