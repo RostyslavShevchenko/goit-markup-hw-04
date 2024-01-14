@@ -455,3 +455,13 @@ margin-left: 120px;
     gap: 16px;
     justify-content: start;
 }
+
+.footer-links .icon-link {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-links .icon-link:hover,
+.footer-links .icon-link:focus {
+    background-color: #31d0aa;
+}
