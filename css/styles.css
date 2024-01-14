@@ -396,7 +396,7 @@ z-index: 1;
 .footer .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     align-content: center;
     flex-wrap: wrap;
 }
