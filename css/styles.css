@@ -3,6 +3,13 @@
     --GREY: #2E2F42B2;
 }
 
+*:hover, *:focus {
+    outline: none;
+    transition-property: color ,background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -49,6 +56,7 @@ position: sticky;
 background-color: #fff;
 top: 0;
 border-bottom: 1px solid #E7E9FC;
+z-index: 1;
 }
 
 .header .container {
@@ -95,6 +103,19 @@ border-bottom: 1px solid #E7E9FC;
 .menu-link {
     color: #2e2f42;
     padding: 24px 0;
+    position: relative;
+}
+
+.menu-link:hover::after,
+.menu-link:focus::after {
+    position: absolute;
+    content: " ";
+    left: 0;
+    bottom: -4px;
+    height: 4px;
+    width: 100%;
+    background-color: #404BBF;
+    border-radius: 2px;
 }
 
 .menu-link:hover,
@@ -133,7 +154,8 @@ border-bottom: 1px solid #E7E9FC;
     background-position: center;
     background-size: cover;
     padding: 188px 0;
-    max-width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .main-hero .container {
@@ -292,8 +314,9 @@ border-bottom: 1px solid #E7E9FC;
     background-color: #4D5AE5;
 }
 
-.icon-link:hover {
-    background-color: #31D0AA
+.icon-link:hover,
+.icon-link:focus {
+    background-color: #31D0AA;
 }
 
 .media {
